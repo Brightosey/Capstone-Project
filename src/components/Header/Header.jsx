@@ -28,41 +28,37 @@ function Header() {
             <Menu className="header__icon" />
           )}
         </button>
-        <nav className={`header__nav ${isOpen ? "header__nav--open" : "header__nav--close"}`}>
-          <ul className="header__nav-list">
-            <li className="header__nav-item">
-              <NavLink
-                to="/"
-                className="header__nav-link header__nav-link--home"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="header__nav-item">
-              <NavLink
-                to="/contact"
-                className="header__nav-link header__nav-link--contact"
-              >
-                Contact
-              </NavLink>
-            </li>
-            <li className="header__nav-item">
-              <NavLink
-                to="/blog"
-                className="header__nav-link header__nav-link--blog"
-              >
-                Blog
-              </NavLink>
-            </li>
-            <li className="header__nav-item">
-              <NavLink
-                to="/about"
-                className="header__nav-link header__nav-link--about"
-              >
-                About
-              </NavLink>
-            </li>
-          </ul>
+        <nav
+          className={`header__nav ${
+            isOpen ? "header__nav--open" : "header__nav--close"
+          }`}
+        >
+         {isOpen  && ( <ul className="header__nav-list">
+            <NavLink to="/" onClick={() => setIsOpen(false)}>
+              <li className="header__nav-item"> Home</li>
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+            >
+              <li className="header__nav-item">Contact</li>
+            </NavLink>
+
+            <NavLink
+              to="/blog"
+              onClick={() => setIsOpen(false)}
+            >
+              <li className="header__nav-item">Blog</li>
+            </NavLink>
+
+            <NavLink
+              to="/about"
+              onClick={() => setIsOpen(false)}
+            >
+              <li className="header__nav-item">About</li>
+            </NavLink>
+          </ul> )}
         </nav>
       </div>
     </header>

@@ -1,0 +1,122 @@
+/* @use "../../style/partials/global" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
+
+.post {
+  padding: 16px;
+
+  &__header {
+    font-size: 36px;
+  }
+
+  &__container {
+    
+  }
+
+  &__body {
+    width: 95%;
+    margin: 0px auto;
+    border: 2px solid $border-color;
+  }
+} */
+
+
+@use "../../style/partials/global" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  
+  &__header {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  &__body {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .post__content {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .post__title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .post__text {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .post__date {
+      font-size: 14px;
+      color: #999;
+    }
+
+    .post__tag-container {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .post__tags {
+      background:$highlight-color;
+      color: #333;
+      margin: 4px auto;
+      padding: 4px 10px;
+      font-size: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  }
+
+  .read-more {
+    display: block;
+    background:$darker-highlight-color;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 0 0 12px 12px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background:$highlight-color;
+    }
+  }
+}

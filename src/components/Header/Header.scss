@@ -22,13 +22,6 @@
     margin-bottom: 1.25rem;
   }
 
-  &__nav-container {
-   /*  width: 90%;
-
-    @include tablet {
-        width: auto;
-    } */
-  }
 
   &__logo-image {
     width: 50px;
@@ -38,7 +31,17 @@
       width: 100px;
       height: 100px;
     }
-  } 
+  }
+  
+  &__nav-container {
+    background: $highlight-color;
+  }
+
+  &__nav-button {
+    @include tablet {
+      display: none;
+    }
+  }
 
   &__nav--close {
     display: none;
@@ -46,15 +49,14 @@
 
   &__nav-list {
     list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    padding: 0px;
+    margin: 0px;
   }
 
   &__nav-item {
   }
 
-  &__nav-link {
+  &__nav-item {
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
