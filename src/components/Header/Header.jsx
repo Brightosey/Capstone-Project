@@ -1,6 +1,6 @@
 import "./Header.scss";
 import { NavLink, Link } from "react-router-dom";
-import reloFoodsLogo from "../../assets/Logo/ReloFoods-logo.jpg";
+import reloFoodsLogo from "../../assets/Logo/ReloFoods-logo.svg";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -33,32 +33,25 @@ function Header() {
             isOpen ? "header__nav--open" : "header__nav--close"
           }`}
         >
-         {isOpen  && ( <ul className="header__nav-list">
-            <NavLink to="/" onClick={() => setIsOpen(false)}>
-              <li className="header__nav-item"> Home</li>
-            </NavLink>
+          {isOpen && (
+            <ul className="header__nav-list">
+              <NavLink to="/" onClick={() => setIsOpen(false)}>
+                <li className="header__nav-item"> Home</li>
+              </NavLink>
 
-            <NavLink
-              to="/contact"
-              onClick={() => setIsOpen(false)}
-            >
-              <li className="header__nav-item">Contact</li>
-            </NavLink>
+              <NavLink to="/contact" onClick={() => setIsOpen(false)}>
+                <li className="header__nav-item">Contact</li>
+              </NavLink>
 
-            <NavLink
-              to="/blog"
-              onClick={() => setIsOpen(false)}
-            >
-              <li className="header__nav-item">Blog</li>
-            </NavLink>
+              <NavLink to="/post/:id" onClick={() => setIsOpen(false)}>
+                <li className="header__nav-item">Blog</li>
+              </NavLink>
 
-            <NavLink
-              to="/about"
-              onClick={() => setIsOpen(false)}
-            >
-              <li className="header__nav-item">About</li>
-            </NavLink>
-          </ul> )}
+              <NavLink to="/about" onClick={() => setIsOpen(false)}>
+                <li className="header__nav-item">About</li>
+              </NavLink>
+            </ul>
+          )}
         </nav>
       </div>
     </header>

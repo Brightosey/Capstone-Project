@@ -1,18 +1,23 @@
 import "./HomePage.scss";
 import { useState, useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
+import Header from "../../components/Header/Header";
 import coffeeBeansMain from "../../assets/Images/Coffee-beans-main.png";
 import coffeeBeansSub from "../../assets/Images/Coffee-beans-sub.png";
 import maizeMain from "../../assets/Images/Maize-main.png";
 import maizeSub from "../../assets/Images/Maize-sub.png";
 import soyBeansMain from "../../assets/Images/Soy-beans-main.png";
 import soyBeansSub from "../../assets/Images/Soy-beans-sub.png";
+import pepperMain from "../../assets/Images/pepper-main.png";
+import pepperSub from "../../assets/Images/pepper-sub.png";
 import reloFoodsLogo from "../../assets/Logo/ReloFoods2-logo.png";
 import NewsFeed from "../../components/NewsFeed/NewsFeed";
+import foodProcessing from "../../assets/Images/foodProcessing.png";
 
 function HomePage() {
   return (
     <>
+      <Header />
       <Hero />
       <section className="home">
         {/* About us */}
@@ -29,9 +34,20 @@ function HomePage() {
         <article className="home__services">
           <h2 className="home__services-title">Our Services</h2>
           <div className="home__services-list">
-            <div className="home__services-item">Food Processing</div>
-            <div className="home__services-item">Commodity Trading</div>
-            <div className="home__services-item">Supply Chain & Logistics</div>
+            <div className="home__services-item">
+              <div className="home__services-container">
+                <img className="home__services-image" src={foodProcessing} alt="foodProcessing" />
+                <p className="home__services-text">Food Processing</p>
+              </div>
+              <div className="home__services-container">
+                <img className="home__services-image" src={foodProcessing} alt="foodProcessing" />
+                <p className="home__services-text">Direct Product Sourcing</p>
+              </div>
+              <div className="home__services-container">
+                <img className="home__services-image" src={foodProcessing} alt="foodProcessing" />
+                <p className="home__services-text">Food Product Logistic</p>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -42,7 +58,11 @@ function HomePage() {
             {/* Maize */}
             <div className="home__products-item">
               <div className="home__products-image-box">
-                <img className="home__products-image-main" src={maizeMain} alt="Maize" />
+                <img
+                  className="home__products-image-main"
+                  src={maizeMain}
+                  alt="Maize"
+                />
                 <img
                   className="home__products-image-overlay"
                   src={maizeSub}
@@ -99,6 +119,27 @@ function HomePage() {
                 />
               </div>
               <p className="home__products-name">Coffee Beans</p>
+            </div>
+
+            <div className="home__products-item">
+              <div className="home__products-image-box">
+                <img
+                  className="home__products-image-main"
+                  src={pepperMain}
+                  alt="Coffee Beans"
+                />
+                <img
+                  className="home__products-image-overlay"
+                  src={pepperSub}
+                  alt="Coffee Beans Close-up"
+                />
+                <img
+                  className="home__products-logo"
+                  src={reloFoodsLogo}
+                  alt="Relo Foods Logo"
+                />
+              </div>
+              <p className="home__products-name">Pepper</p>
             </div>
           </div>
         </article>

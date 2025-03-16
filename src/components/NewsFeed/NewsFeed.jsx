@@ -69,7 +69,7 @@ function NewsFeed() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(`${backendUrl}/api/newsfeed`);
+        const response = await axios.get(`${backendUrl}/newsfeed`);
         setPosts(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -89,7 +89,7 @@ function NewsFeed() {
       <h2 className="post__header">Latest News</h2>
       <article className="post__container">
         {posts?.map((post) => (
-          <Link to={`/posts/${post.id}`} key={post.id} className="post__body">
+          <Link to={`/post/${post.id}`} key={post.id} className="post__body">
             <img src={post.image_url} alt={post.title} className="post__image" />
             <div className="post__content">
               <p className="post__tags">{post.category}</p>

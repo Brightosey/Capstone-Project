@@ -1,22 +1,21 @@
 import "./About.scss";
+import Header from "../../components/Header/Header";
 
 function About() {
   return (
+    <>
+    <Header />
     <main className="about">
       <article className="about__hero-content">
-        <h1 className="about__hero-title">About ReloFoods</h1>
-        <p className="about__hero">
-          {" "}
-          At ReloFoods, we are passionate about delivering high-quality,
-          nutritious, and sustainable food products. Our goal is to bring the
-          best of food processing and commodity trading to your table.
+        <h1 className="about__hero-title">About Us</h1>
+        <p className="about__hero-text">
+         RELO FOODS LIMITED
         </p>
       </article>
 
       <article className="about__mission">
         <h2 className="about__title">Our Mission</h2>
         <p className="about__text">
-          {" "}
           We aim to revolutionize the food industry by ensuring quality,
           affordability, and sustainability in every product we deliver.
         </p>
@@ -59,6 +58,7 @@ function About() {
         </div>
       </article>
     </main>
+    </>
   );
 }
 

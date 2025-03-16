@@ -24,7 +24,7 @@ function Hero() {
     const fetchSlides = async () => {
       try {
         console.log(backendUrl);
-        const response = await axios.get(`${backendUrl}/api/slides`);
+        const response = await axios.get(`${backendUrl}/slides`);
         setSlides(response.data);
       } catch (error) {
         alert("Error fetching data", error);
