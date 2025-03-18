@@ -7,51 +7,36 @@ import { useState } from "react";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  function clickButton() {
+  function toggleMenu() {
     setIsOpen((prev) => !prev);
   }
 
   return (
     <header className="header">
       <Link to="/" className="header__logo">
-        <img
-          src={reloFoodsLogo}
-          alt="ReloFoods-logo"
-          className="header__logo-image"
-        />
+        <img src={reloFoodsLogo} alt="ReloFoods-logo" className="header__logo-image" />
       </Link>
+
       <div className="header__nav-container">
-        <button className="header__button" onClick={clickButton}>
-          {isOpen ? (
-            <X className="header__icon" />
-          ) : (
-            <Menu className="header__icon" />
-          )}
+        <button className="header__button" onClick={toggleMenu}>
+          {isOpen ? <X className="header__icon" /> : <Menu className="header__icon" />}
         </button>
-        <nav
-          className={`header__nav ${
-            isOpen ? "header__nav--open" : "header__nav--close"
-          }`}
-        >
-          {isOpen && (
-            <ul className="header__nav-list">
-              <NavLink to="/" onClick={() => setIsOpen(false)}>
-                <li className="header__nav-item"> Home</li>
-              </NavLink>
 
-              <NavLink to="/contact" onClick={() => setIsOpen(false)}>
-                <li className="header__nav-item">Contact</li>
-              </NavLink>
-
-              <NavLink to="/post/:id" onClick={() => setIsOpen(false)}>
-                <li className="header__nav-item">Blog</li>
-              </NavLink>
-
-              <NavLink to="/about" onClick={() => setIsOpen(false)}>
-                <li className="header__nav-item">About</li>
-              </NavLink>
-            </ul>
-          )}
+        <nav className={`header__nav ${isOpen ? "header__nav--open" : ""}`}>
+          <ul className="header__nav-list">
+            <li>
+              <NavLink to="/" className="header__nav-item" onClick={() => setIsOpen(false)}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className="header__nav-item" onClick={() => setIsOpen(false)}>Contact</NavLink>
+            </li>
+            <li>
+              <NavLink to="/post/:id" className="header__nav-item" onClick={() => setIsOpen(false)}>Blog</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className="header__nav-item" onClick={() => setIsOpen(false)}>About</NavLink>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>

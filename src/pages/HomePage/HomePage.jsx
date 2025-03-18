@@ -33,7 +33,7 @@ function HomePage() {
         {/*  Services */}
         <article className="home__services">
           <h2 className="home__services-title">Our Services</h2>
-          <div className="home__services-list">
+        {/*   <div className="home__services-list">
             <div className="home__services-item">
               <div className="home__services-container">
                 <img className="home__services-image" src={foodProcessing} alt="foodProcessing" />
@@ -48,7 +48,7 @@ function HomePage() {
                 <p className="home__services-text">Food Product Logistic</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </article>
 
         {/* Products */}

@@ -1,8 +1,69 @@
 import "./Contact.scss";
 import Header from "../../components/Header/Header";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  function handleName(event) {
+    setName(event.target.value);
+  }
+
+  function handleEmail(event) {
+    setEmail(event.target.value);
+  }
+
+  function handleMessage(event) {
+    setMessage(event.target.value);
+  }
+
+  function isEmailValid(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function isMessageValid() {
+    return message.length <= 1000;
+  }
+
+  function isFormValid() {
+    return name && email && isMessageValid() && isEmailValid(email);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (!isFormValid()) {
+      alert("Failed to render message");
+      return;
+    }
+
+    const newMessage = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    postMessage(newMessage);
+    setName("");
+    setEmail("");
+    setMessage("");
+  }
+
+  const postMessage = async (newMessage) => {
+    try {
+      await axios.post(`${backendUrl}/messages/${id}`, newMessage);
+    } catch (error) {
+      alert("Error posting message", error);
+    }
+  };
+
   return (
     <>
       <Header />
@@ -28,16 +89,26 @@ function Contact() {
             {/* Location Card */}
             <div className="contact__location">
               <div className="contact__location-container">
-                <img className="contact__location-icon" src="" alt="Location Icon" />
+                <img
+                  className="contact__location-icon"
+                  src={null}
+                  alt="Location Icon"
+                />
               </div>
               <h3 className="contact__location-title">Locations</h3>
-              <p className="contact__location-text">Alagomeji Yaba Lagos, Nigeria</p>
+              <p className="contact__location-text">
+                Alagomeji Yaba Lagos, Nigeria
+              </p>
             </div>
 
             {/* Email Card */}
             <div className="contact__email">
               <div className="contact__email-container">
-                <img className="contact__email-icon" src="" alt="Email Icon" />
+                <img
+                  className="contact__email-icon"
+                  src={null}
+                  alt="Email Icon"
+                />
               </div>
               <h3 className="contact__email-title">Email Address</h3>
               <p className="contact__email-text">info@relofoods.com</p>
@@ -47,7 +118,11 @@ function Contact() {
             {/* Phone Number Card */}
             <div className="contact__phone">
               <div className="contact__phone-container">
-                <img className="contact__phone-icon" src="" alt="Phone Icon" />
+                <img
+                  className="contact__phone-icon"
+                  src={null}
+                  alt="Phone Icon"
+                />
               </div>
               <h3 className="contact__phone-title">Phone Number</h3>
               <p className="contact__phone-text">+ (234) 9028545256</p>
@@ -55,21 +130,30 @@ function Contact() {
           </div>
 
           {/* Contact Form */}
-          <form className=" contact__form">
+          <form className=" contact__form" onSubmit={handleSubmit}>
             <input
               type="text"
+              name="name"
+              value={name}
+              onChange={handleName}
               placeholder="Your Name"
               className="contact__input"
               required
             />
             <input
               type="email"
+              name="name"
+              value={email}
+              onChange={handleEmail}
               placeholder="Your Email"
               className="contact__input"
               required
             />
             <textarea
               placeholder="Your Message"
+              name="message"
+              value={message}
+              onChange={handleMessage}
               className="contact__textarea"
               required
             ></textarea>
