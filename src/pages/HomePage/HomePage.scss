@@ -1,9 +1,9 @@
 @use "../../style/partials/global" as *;
 @use "../../style/partials/mixins" as *;
 @use "../../style/partials/variables" as *;
+@use "../../style/partials/font" as *;
 
 .home {
-  font-family: "Verdana", sans-serif;
   color: #333;
   padding: 16px;
   margin: 0px auto;

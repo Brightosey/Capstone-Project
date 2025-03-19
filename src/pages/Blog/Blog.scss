@@ -1,0 +1,148 @@
+@use "../../style/partials/global" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
+@use "../../style/partials/font" as *;
+
+.blog {
+  &__hero {
+    &-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      background-image: url("../../assets/Images/hero-blog.png");
+      background-size: cover;
+      width: 95%;
+      height: 400px;
+      margin: 0px auto;
+      margin-top: -40px;
+      border: 2px solid $border-color;
+      border-radius: 20px;
+      backdrop-filter: blur(160px);
+      animation: backgroundMovement 10s infinite alternate; // Animation added here
+
+      // Background movement animation
+      @keyframes backgroundMovement {
+        0% {
+          background-position: 0% 0%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        100% {
+          background-position: 0% 0%;
+        }
+
+        @include desktop {
+          height: 600px;
+        }
+      }
+    }
+
+    &-title,
+    &-text {
+      color: $alternate-text-color;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column; // Default: stacked for mobile
+    gap: 2rem;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+
+    @include tablet {
+      flex-direction: row; // Side-by-side layout for tablet+
+    }
+
+    @include desktop {
+      max-width: 1200px;
+      padding: 2rem;
+    }
+  }
+
+  &__post {
+    flex: 1;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+
+    @include tablet {
+      flex-direction: row;
+      padding: 2rem;
+      width: 48.5%;
+    }
+
+    @include desktop {
+      padding: 2.5rem;
+      width: 32%;
+    }
+  }
+
+  &__sidebar {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    @include tablet {
+      flex: 0.5; // Takes up less space on tablet
+    }
+
+    @include desktop {
+      flex: 0.4; // Even smaller on desktop for balance
+    }
+
+    &-title1,
+    &-title2 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+      @include tablet {
+        font-size: 1.5rem;
+      }
+
+      @include desktop {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-list1,
+    &-list2 {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 0.75rem;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        transition: background 0.3s, transform 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          background: $highlight-color;
+          transform: translateY(-3px);
+        }
+
+        @include tablet {
+          padding: 1rem;
+        }
+
+        @include desktop {
+          padding: 1.2rem;
+        }
+      }
+    }
+  }
+}

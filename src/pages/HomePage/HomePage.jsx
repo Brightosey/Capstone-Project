@@ -12,7 +12,7 @@ import pepperMain from "../../assets/Images/pepper-main.png";
 import pepperSub from "../../assets/Images/pepper-sub.png";
 import reloFoodsLogo from "../../assets/Logo/ReloFoods2-logo.png";
 import NewsFeed from "../../components/NewsFeed/NewsFeed";
-import foodProcessing from "../../assets/Images/foodProcessing.png";
+/* import foodProcessing from "../../assets/Images/foodProcessing.png"; */
 
 function HomePage() {
   return (
@@ -146,12 +146,10 @@ function HomePage() {
 
         {/* contact us */}
         <article className="home__contact">
-          <h2 className="home__contact-title">Get in Touch</h2>
+          <h2 className="home__contact-title">What We Deliver</h2>
           <p className="home__contact-text">
-            Have questions or want to partner with us? Reach out and let’s work
-            together to build a sustainable future.
+          At Relo Foods Limited, we specialize in both commodity trading and food processing, delivering exceptional quality, innovation, and personalized service. Our commitment to excellence ensures we provide unparalleled value and meet the unique needs of our customers every step of the way.
           </p>
-          <button className="home__contact-button">Contact Us</button>
         </article>
         <article>
           <NewsFeed />

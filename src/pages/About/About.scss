@@ -1,10 +1,14 @@
 @use "../../style/partials/global" as *;
 @use "../../style/partials/mixins" as *;
 @use "../../style/partials/variables" as *;
+@use "../../style/partials/font" as *;
 
 .about {
   &__hero {
     &-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       position: relative;
       text-align: center;
       background-image: url("../../assets/Images/hero-about.png");

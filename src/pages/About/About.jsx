@@ -9,7 +9,7 @@ function About() {
       <article className="about__hero-content">
         <h1 className="about__hero-title">About Us</h1>
         <p className="about__hero-text">
-         RELO FOODS LIMITED
+        Learn more about our mission, values, and the team that drives us forward. Your journey with us starts here.
         </p>
       </article>
 

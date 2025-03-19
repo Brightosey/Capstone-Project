@@ -32,7 +32,40 @@ function NewsDetail() {
   }
 
   if (!post) {
-    return <div>No post found!</div>;  
+    return <div>No post found!</div>;
+  }
+
+  function formatDetailText(text) {
+    // Split the text into sections based on double new lines for paragraphs
+    const sections = text.split(/\n\n+/).map((section, index) => {
+      // Handle bullet points (- item) and numbered lists (1. item)
+      if (/^(\d+\.\s|\-\s)/m.test(section)) {
+        const lines = section.split("\n");
+        const isOrdered = /^\d+\.\s/.test(lines[0]);
+        return isOrdered ? (
+          <ol key={index}>
+            {lines.map((line, i) => (
+              <li key={i}>{line.replace(/^\d+\.\s/, "").trim()}</li>
+            ))}
+          </ol>
+        ) : (
+          <ul key={index}>
+            {lines.map((line, i) => (
+              <li key={i}>{line.replace(/^\-\s/, "").trim()}</li>
+            ))}
+          </ul>
+        );
+      }
+      // Handle bold text (**bold**) using JSX spans
+      const formattedText = section.split(/(\*\*.*?\*\*)/).map((part, i) => {
+        if (part.startsWith("**") && part.endsWith("**")) {
+          return <strong key={i}>{part.slice(2, -2)}</strong>;
+        }
+        return part;
+      });
+      return <p key={index}>{formattedText}</p>;
+    });
+    return sections;
   }
 
   return (
@@ -46,7 +79,7 @@ function NewsDetail() {
           />
         </Link>
         <Link to="/" className="detail-page__back-link">
-          <img src={ArrowLeft} alt="back" />
+          <ArrowLeft />
           Home
         </Link>
       </article>
@@ -57,7 +90,7 @@ function NewsDetail() {
         </div>
         <div className="detail-page__detail-container">
           <h1 className="detail-page__title">{post.title}</h1>
-          <p className="detail-page__text">{post.detail}</p>
+          <p className="detail-page__text">{formatDetailText(post.detail)}</p>
         </div>
         <div className="detail-page__source-container">
           <ul className="detail-page__source-list">

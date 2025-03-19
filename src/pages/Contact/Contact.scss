@@ -1,10 +1,14 @@
 @use "../../style/partials/global" as *;
 @use "../../style/partials/mixins" as *;
 @use "../../style/partials/variables" as *;
+@use "../../style/partials/font" as *;
 
 .contact {
   &__hero {
     &-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       position: relative;
       text-align: center;
       background-image: url("../../assets/Images/hero-contact.png");
@@ -34,6 +38,10 @@
           height: 600px;
         }
       }
+    }
+
+    &-text {
+        width: 70%;
     }
 
     &-title,
@@ -139,8 +147,6 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    /*  flex-wrap: wrap; */
-    /* width: 100%; */
   }
 
   .contact__location,
@@ -206,14 +212,14 @@
 }
 
 // Responsive Design
-@media (max-width: 1024px) {
+@include desktop {
   .contact__body-container {
     flex-direction: column;
     align-items: center;
   }
 }
 
-@media (max-width: 768px) {
+@include tablet {
   .contact__location,
   .contact__email,
   .contact__phone {

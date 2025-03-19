@@ -31,7 +31,7 @@ function Header() {
               <NavLink to="/contact" className="header__nav-item" onClick={() => setIsOpen(false)}>Contact</NavLink>
             </li>
             <li>
-              <NavLink to="/post/:id" className="header__nav-item" onClick={() => setIsOpen(false)}>Blog</NavLink>
+              <NavLink to="/Blog" className="header__nav-item" onClick={() => setIsOpen(false)}>Blog</NavLink>
             </li>
             <li>
               <NavLink to="/about" className="header__nav-item" onClick={() => setIsOpen(false)}>About</NavLink>

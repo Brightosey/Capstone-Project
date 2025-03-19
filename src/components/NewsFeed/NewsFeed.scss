@@ -20,10 +20,10 @@
   }
 } */
 
-
 @use "../../style/partials/global" as *;
 @use "../../style/partials/mixins" as *;
 @use "../../style/partials/variables" as *;
+@use "../../style/partials/font" as *;
 
 .post {
   display: flex;
@@ -31,7 +31,7 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
-  
+
   &__header {
     font-size: 36px;
     font-weight: bold;
@@ -95,7 +95,7 @@
     }
 
     .post__tags {
-      background:$highlight-color;
+      background: $highlight-color;
       color: #333;
       margin: 4px auto;
       padding: 4px 10px;
@@ -103,11 +103,19 @@
       font-weight: bold;
       border-radius: 5px;
     }
+
+    @include tablet {
+      width: 48.5%;
+    }
+
+    @include desktop {
+      width: 32%;
+    }
   }
 
   .read-more {
     display: block;
-    background:$darker-highlight-color;
+    background: $darker-highlight-color;
     color: #000;
     text-align: center;
     padding: 10px;
@@ -116,7 +124,7 @@
     transition: background 0.3s ease;
 
     &:hover {
-      background:$highlight-color;
+      background: $highlight-color;
     }
   }
 }

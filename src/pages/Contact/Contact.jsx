@@ -71,7 +71,9 @@ function Contact() {
         <article className=" contact__hero-content">
           <h1 className="contact__hero-title">Contact Us</h1>
           <p className=" contact__hero-text">
-            For any product inquiries, assistance, or support.
+            For any product inquiries, assistance, or support.Reach out today,
+            and we’ll provide you with the assitance you need. <br /> Your thoughts and
+            inquiries are important.
           </p>
         </article>
 
@@ -171,34 +173,6 @@ function Contact() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
-
-          {/* Social Media Links */}
-          <div className="/* contact__section */ contact__social">
-            <a
-              href="https://facebook.com"
-              className="contact__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Facebook
-            </a>
-            <a
-              href="https://twitter.com"
-              className="contact__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://linkedin.com"
-              className="contact__social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
           </div>
         </section>
       </div>
