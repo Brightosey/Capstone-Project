@@ -40,9 +40,47 @@
       }
     }
 
+    &-title {
+      font-family: "newsreader";
+    }
+
+    &-title {
+      font-size: 18px;
+      font-family: "newsreader";
+      font-weight: bolder;
+
+      @include tablet {
+        font-size: 32px;
+      }
+
+      @include desktop {
+        font-size: 40px;
+      }
+    }
+
+    &-text {
+      font-size: 14.5px;
+      line-height: 1.2;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include desktop {
+        font-size: 32px;
+      }
+    }
+
     &-title,
     &-text {
-      color: $alternate-text-color;
+      color: $primary-text-color;
+      text-shadow: 2px 2px 2px $highlight-color;
+    }
+
+    &-description {
+      width: 70%;
+      text-align: justify;
+      padding: 10px;
     }
   }
 
@@ -50,11 +88,9 @@
     display: flex;
     flex-direction: column; // Default: stacked for mobile
     gap: 2rem;
-    max-width: 95%;
+    width: 100%;
     margin: 0 auto;
     padding: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
     gap: 1.25rem;
 
     @include tablet {
@@ -62,7 +98,6 @@
     }
 
     @include desktop {
-      max-width: 1200px;
       padding: 2rem;
     }
   }
@@ -72,19 +107,15 @@
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
     gap: 1.25rem;
 
     @include tablet {
       flex-direction: row;
       padding: 2rem;
-      width: 48.5%;
     }
 
     @include desktop {
       padding: 2.5rem;
-      width: 32%;
     }
   }
 
@@ -100,6 +131,10 @@
 
     @include desktop {
       flex: 0.4; // Even smaller on desktop for balance
+    }
+
+    &-title {
+      font-family: "newsreader";
     }
 
     &-title1,

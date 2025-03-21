@@ -12,7 +12,11 @@ import pepperMain from "../../assets/Images/pepper-main.png";
 import pepperSub from "../../assets/Images/pepper-sub.png";
 import reloFoodsLogo from "../../assets/Logo/ReloFoods2-logo.png";
 import NewsFeed from "../../components/NewsFeed/NewsFeed";
-/* import foodProcessing from "../../assets/Images/foodProcessing.png"; */
+import agroImage from "../../assets/Images/agro-image.png";
+/* import foodProcessing from "../../assets/Icons/food-processing.png";
+import logistics from "../../assets/Icons/logistics.png";
+import sourcing from "../../assets/Icons/sourcing.png"; */
+
 
 function HomePage() {
   return (
@@ -20,35 +24,51 @@ function HomePage() {
       <Header />
       <Hero />
       <section className="home">
-        {/* About us */}
         <article className="home__about">
-          <h2 className="home__about-title">About Us</h2>
-          <p className="home__about-text">
-            We specialize in food processing and commodity trading, ensuring
-            quality products reach the market efficiently.
-          </p>
-          <button className="home__about-button">Read more</button>
+            <div className="home__about-header">
+              <img
+                src={reloFoodsLogo}
+                alt="Agri-Icon"
+                className="home__about-icon"
+              />
+              <h3 className="home__about-subtitle">Welcome to</h3>
+            </div>
+            <h1 className="home__about-title">Relo Foods Limited</h1>
+            <p className="home__about-text">
+              At Relo Foods, we are dedicated to redefining the landscape of
+              agricultural processing and commodity trading. Our commitment to
+              sustainability, quality, and efficiency sets us apart as we bring
+              premium food products to consumers and businesses alike. From farm
+              to table, we ensure every step meets the highest standards.
+            </p>
+          <div className="home__about-image">
+            <img
+              src={agroImage}
+              alt="Agricultural Produce"
+              className="home__about-img"
+            />
+          </div>
         </article>
 
         {/*  Services */}
         <article className="home__services">
           <h2 className="home__services-title">Our Services</h2>
-        {/*   <div className="home__services-list">
+            <div className="home__services-list">
             <div className="home__services-item">
               <div className="home__services-container">
-                <img className="home__services-image" src={foodProcessing} alt="foodProcessing" />
+                <img className="home__services-image" /* src={foodProcessing} */ alt="foodProcessing" />
                 <p className="home__services-text">Food Processing</p>
               </div>
               <div className="home__services-container">
-                <img className="home__services-image" src={foodProcessing} alt="foodProcessing" />
+                <img className="home__services-image" /* src={sourcing } */ alt="foodProcessing" />
                 <p className="home__services-text">Direct Product Sourcing</p>
               </div>
               <div className="home__services-container">
-                <img className="home__services-image" src={foodProcessing} alt="foodProcessing" />
+                <img className="home__services-image" /* src={logistics }  */ alt="foodProcessing" />
                 <p className="home__services-text">Food Product Logistic</p>
               </div>
             </div>
-          </div> */}
+          </div>
         </article>
 
         {/* Products */}
@@ -148,11 +168,15 @@ function HomePage() {
         <article className="home__contact">
           <h2 className="home__contact-title">What We Deliver</h2>
           <p className="home__contact-text">
-          At Relo Foods Limited, we specialize in both commodity trading and food processing, delivering exceptional quality, innovation, and personalized service. Our commitment to excellence ensures we provide unparalleled value and meet the unique needs of our customers every step of the way.
+            At Relo Foods Limited, we specialize in both commodity trading and
+            food processing, delivering exceptional quality, innovation, and
+            personalized service. Our commitment to excellence ensures we
+            provide unparalleled value and meet the unique needs of our
+            customers every step of the way.
           </p>
         </article>
-        <article>
-          <NewsFeed />
+        <article className="newsfeed">
+          <NewsFeed autoSlide={true} />
         </article>
       </section>
     </>

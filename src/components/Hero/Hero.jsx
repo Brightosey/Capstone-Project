@@ -33,7 +33,7 @@ function Hero() {
     };
     fetchSlides();
   }, [])
-
+ console.log(slides[0]?.image);
   return (
     <section className="hero">
       <article className="hero__container">

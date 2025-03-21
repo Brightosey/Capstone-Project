@@ -33,25 +33,23 @@
   padding: 20px;
 
   &__header {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
+    font-family: "newsreader";
   }
 
   &__container {
     display: flex;
-    flex-direction: column;
     gap: 20px;
     width: 100%;
-    margin: 0px auto;
+    flex-wrap: wrap;
   }
 
   &__body {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease-in-out;
 
@@ -59,59 +57,65 @@
       transform: scale(1.05);
     }
 
-    img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-    }
-
-    .post__content {
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .post__title {
-      font-size: 18px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .post__text {
-      font-size: 12px;
-      color: #666;
-    }
-
-    .post__date {
-      font-size: 14px;
-      color: #999;
-    }
-
-    .post__tag-container {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .post__tags {
-      background: $highlight-color;
-      color: #333;
-      margin: 4px auto;
-      padding: 4px 10px;
-      font-size: 10px;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
     @include tablet {
-      width: 48.5%;
+      width: 45%;
     }
 
     @include desktop {
-      width: 32%;
+      width: 30.5%;
     }
   }
+
+  &__image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 10px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+  &__text {
+    font-size: 12px;
+    text-decoration: none;
+    color: #666;
+  }
+
+  &__date {
+    font-size: 14px;
+    text-decoration: none;
+    color: #999;
+  }
+
+  &__tag-container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  &__tags {
+    background: $highlight-color;
+    color: #333;
+    margin: 4px auto;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
 
   .read-more {
     display: block;
@@ -120,6 +124,7 @@
     text-align: center;
     padding: 10px;
     font-weight: bold;
+    text-decoration: none;
     border-radius: 0 0 12px 12px;
     transition: background 0.3s ease;
 
@@ -128,3 +133,140 @@
     }
   }
 }
+
+.post__home {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+    opacity: 1;
+    transform: translateX(-100%); // Start completely off-screen to the left
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    text-decoration: none;
+    color: inherit;
+
+    &-visible {
+        visibility: visible; // Make it visible
+        transform: translateX(0);
+      }
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    &-image {
+      width: 100%;
+      max-height: 250px; 
+      object-fit: cover; 
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+  
+      .post__home:hover & {
+        transform: scale(1.05); // Subtle zoom effect on hover
+      }
+
+      @include tablet {
+        max-height:400px;
+        }
+    }
+  
+    &-content {
+      padding: 15px;
+    }
+  
+    &-tags {
+      font-size: 12px;
+      color:$highlight-color;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 10px 0;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include desktop {
+        font-size:30px;
+      }
+    }
+  
+    &-text {
+      font-size: 14px;
+      color: #555;
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      @include desktop {
+        font-size:22px;
+      }
+    }
+  
+    &-date {
+      font-size: 12px;
+      color:$border-color;
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include desktop {
+        font-size:20px;
+      }
+    }
+  
+    &-tag-container {
+      display: flex;
+      gap: 8px;
+      padding: 10px 15px;
+      flex-wrap: wrap;
+    }
+
+    &-tags {
+        background: #eee;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+
+        @include tablet {
+            font-size: 14px;
+          }
+    
+          @include desktop {
+            font-size:18px;
+          }
+      }
+  
+    .read-more1 {
+      padding: 10px 15px;
+      color:$highlight-color;
+      font-weight: bold;
+      text-align: right;
+      transition: color 0.3s ease-in-out;
+  
+      &:hover {
+        color: $darker-highlight-color;
+      }
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include desktop {
+        font-size:28px;
+      }
+    }
+  }
+  

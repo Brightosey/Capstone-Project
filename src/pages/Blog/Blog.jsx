@@ -11,10 +11,12 @@ function Blog() {
           <h1 className="blog__hero-title">
             From Farm to Market: Stories That Matter
           </h1>
+          <div className="blog__hero-description">
           <p className=" blog__hero-text">
             Discover real stories and data-driven insights on how agriculture
             and commodity trading shape our world.
           </p>
+          </div>
         </article>
         <section className="blog__body">
           <section className="blog__post">

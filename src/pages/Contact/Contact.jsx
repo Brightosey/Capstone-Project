@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -33,6 +34,7 @@ function Contact() {
   }
 
   function isFormValid() {
+    console.log(name, email, isMessageValid(), isEmailValid(email));
     return name && email && isMessageValid() && isEmailValid(email);
   }
 
@@ -58,11 +60,14 @@ function Contact() {
 
   const postMessage = async (newMessage) => {
     try {
-      await axios.post(`${backendUrl}/messages/${id}`, newMessage);
+      await axios.post(`${backendUrl}/messages`, newMessage);
     } catch (error) {
+      console.log(error);
       alert("Error posting message", error);
     }
   };
+
+  
 
   return (
     <>
@@ -70,11 +75,13 @@ function Contact() {
       <div className="contact">
         <article className=" contact__hero-content">
           <h1 className="contact__hero-title">Contact Us</h1>
+          <div className="contact__hero-description">
           <p className=" contact__hero-text">
             For any product inquiries, assistance, or support.Reach out today,
             and we’ll provide you with the assitance you need. <br /> Your thoughts and
             inquiries are important.
           </p>
+          </div>
         </article>
 
         <section className="contact__body-content">
@@ -159,9 +166,11 @@ function Contact() {
               className="contact__textarea"
               required
             ></textarea>
+            <div className="contact__btn">
             <button type="submit" className="contact__button">
               Send Message
             </button>
+            </div>
           </form>
 
           {/* Google Map */}
@@ -169,6 +178,7 @@ function Contact() {
             <iframe
               title="Administrative Office"
               src="https://www.google.com/maps?q=6.5244,3.3792&output=embed"
+           /*   src="https://maps.app.goo.gl/pWhRREG6q71ESv1N8" */
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

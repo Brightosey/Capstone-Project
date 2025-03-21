@@ -122,4 +122,13 @@
       margin-top: 1rem;
     }
   }
+
+  &__copyright {
+   text-align: center;
+
+   @include tablet {
+    display: flex;
+    justify-content: flex-end;
+   }
+  }
 }

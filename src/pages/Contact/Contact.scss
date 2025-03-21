@@ -35,18 +35,86 @@
         }
 
         @include desktop {
-          height: 600px;
+          height: 400px;
         }
       }
     }
 
+    &-title {
+      font-size: 18px;
+      font-family: "newsreader";
+      font-weight:bolder;
+
+      @include tablet{
+        font-size: 32px;
+      }
+
+      @include desktop {
+        font-size: 40px;
+      }
+    }
+
     &-text {
-        width: 70%;
+      font-size: 14.5px;
+      line-height: 1.2;
+
+      @include tablet{
+        font-size: 24px;
+      }
+
+      @include desktop {
+        font-size: 32px;
+      }
     }
 
     &-title,
     &-text {
-      color: $alternate-text-color;
+      color: $primary-text-color;
+      text-shadow: 2px 2px 2px $highlight-color;
+    }
+
+    &-description {
+      width: 70%;
+      text-align: justify;
+      padding: 10px;
+    }
+  }
+
+  &__body-section {
+    padding: 20px;
+    text-align: center;
+
+    // Title styling
+    &-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-family: "newsreader";
+      text-align: center;
+
+      @include tablet {
+        font-size: 2rem;
+      }
+
+      @include desktop {
+        font-size: 2.5rem;
+      }
+    }
+
+    // Text styling
+    &-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      text-align: justify;
+
+      @include tablet {
+        font-size: 1.3rem;
+      }
+
+      @include desktop {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -64,8 +132,8 @@
     width: 100%;
     padding: 12px;
     margin-bottom: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 2px solid $border-color;
+    border-radius: 10px;
     font-size: 16px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
@@ -86,18 +154,23 @@
     min-height: 150px;
   }
 
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   &__button {
-    padding: 12px 24px;
+    padding: 12px;
     font-size: 16px;
-    background-color: #ff7a00; // orange button color
-    color: #fff;
+    background-color: $darker-highlight-color;
+    color: $alternate-text-color;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #e56600; // darker orange on hover
+      background-color: $highlight-color;
     }
 
     &:focus {
@@ -109,120 +182,113 @@
     width: 100%;
     margin: 0;
     padding: 0;
-  }
 
-  &__map iframe {
-    width: 100%;
-    height: 500px; /* You can adjust the height as per your design needs */
-    border: none;
-    display: block;
-  }
-}
-
-.contact__body-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 1rem;
-  text-align: center;
-
-  .contact__body-section {
-    max-width: 700px;
-    margin-bottom: 2rem;
-
-    &-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    &-text {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.5;
+    & iframe {
+      width: 100%;
+      height: 500px; /* You can adjust the height as per your design needs */
+      border: none;
+      display: block;
     }
   }
 
-  .contact__body-container {
+  &__body-container {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+
+    // Tablet and Desktop Styles
+    @include tablet {
+      gap: 25px;
+      padding: 30px;
+    }
+
+    @include desktop {
+      gap: 30px;
+      padding: 40px;
+    }
   }
 
-  .contact__location,
-  .contact__email,
-  .contact__phone {
+  &__location,
+  &__email,
+  &__phone {
     flex: 1;
-    padding: 1.5rem;
-    border-radius: 12px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background-color: white;
-    color: #000;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
     &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1); // Increases size by 10%
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); // Adds depth
+    }
+
+    // Tablet and Desktop Styles
+    @include tablet {
+      flex: 0 1 calc(33% - 20px);
+      padding: 25px;
+    }
+
+    @include desktop {
+      flex: 0 1 calc(30% - 20px);
+      padding: 30px;
     }
 
     &-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background-color: #f8d147;
-      margin: 0 auto 1rem;
+      margin-bottom: 15px;
     }
 
     &-icon {
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 10px;
+
+      // Tablet and Desktop Styles
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+
+      @include desktop {
+        width: 70px;
+        height: 70px;
+      }
     }
 
     &-title {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: bold;
-      margin-bottom: 0.5rem;
+      margin-bottom: 10px;
+
+      // Tablet and Desktop Styles
+      @include tablet {
+        font-size: 1.8rem;
+      }
+
+      @include desktop {
+        font-size: 2rem;
+      }
     }
 
     &-text {
-      font-size: 1rem;
-      color: #444;
-      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+
+      // Tablet and Desktop Styles
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      @include desktop {
+        font-size: 1.3rem;
+      }
     }
   }
-
-  .contact__email {
-    background-color: $highlight-color;
-    color: $primary-text-color;
-
-    &-container {
-      background-color: #fff;
-    }
-
-    &-text {
-      color: $primary-text-color;
-    }
-  }
-}
-
-// Responsive Design
-@include desktop {
-  .contact__body-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@include tablet {
-  .contact__location,
-  .contact__email,
-  .contact__phone {
-    max-width: 90%;
+  &__email {
+    background: $highlight-color;
   }
 }

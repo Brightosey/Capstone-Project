@@ -3,6 +3,13 @@
 @use "../../style/partials/variables" as *;
 @use "../../style/partials/font" as *;
 
+$primary-color: #4caf50;
+$secondary-color: #ff7043;
+$background-color: #f7f7f7;
+$text-color: #333;
+$light-text-color: #666;
+$heading-color: #212121;
+
 .about {
   &__hero {
     &-content {
@@ -35,13 +42,449 @@
         }
       }
 
+      @include tablet {
+        width: 99%;
+        margin-top: -70px;
+      }
+
       @include desktop {
-        height: 600px;
+        height: 400px;
       }
     }
+
+    &-title {
+      font-size: 18px;
+      font-family: "newsreader";
+      font-weight: bolder;
+
+      @include tablet {
+        font-size: 32px;
+      }
+
+      @include desktop {
+        font-size: 40px;
+      }
+    }
+
+    &-text {
+      font-size: 14.5px;
+      line-height: 1.2;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include desktop {
+        font-size: 32px;
+      }
+    }
+
     &-title,
     &-text {
-      color: $alternate-text-color;
+      color: $primary-text-color;
+      text-shadow: 2px 2px 2px $highlight-color;
+    }
+
+    &-description {
+      width: 70%;
+      text-align: justify;
+      padding: 10px;
+    }
+  }
+
+  &__header {
+    text-align: center;
+
+    &-title {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      font-weight: 500;
+      color: $heading-color;
+      margin: 1rem auto;
+
+      @include tablet {
+        font-size: 2rem;
+      }
+
+      @include desktop {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &__section {
+    &-top-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-text {
+      font-size: 1.1rem;
+      color: $light-text-color;
+      max-width: 800px;
+      text-align: center;
+      padding: 0px 16px;
+
+      @include tablet {
+        font-size: 1.3rem;
+        line-height: 1.4;
+      }
+
+      @include desktop {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-figure {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 20px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__purpose {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+    }
+  }
+
+  &__mission,
+  &__vision {
+    background-color: $alternate-text-color;
+    border: 2px solid $highlight-color;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      padding: 2rem;
+    }
+
+    @include desktop {
+      padding: 2.5rem;
+    }
+  }
+
+  &__mission-subheading,
+  &__vision-subheading {
+    font-size: 1.8rem;
+    font-family: "newsreader";
+    font-weight: 600;
+    color: $primary-text-color;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    @include desktop {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__mission-text,
+  &__vision-text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #666;
+
+    @include tablet {
+      font-size: 1.3rem;
+    }
+
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__subheading {
+    text-align: center;
+    font-size: 24px;
+    font-family: "newsreader";
+    font-weight: 500;
+    border-top: 4px solid $highlight-color;
+  }
+
+  &__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__feature {
+    flex: 1 1 calc(50% - 20px);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    &-title {
+      font-size: 1.4rem;
+      color: $primary-color;
+    }
+
+    &-text {
+      font-size: 1rem;
+      color: $light-text-color;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    @include desktop {
+      flex: 1 1 calc(25% - 20px);
+    }
+  }
+
+  &__core-areas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 1rem;
+  }
+
+  &__core-area {
+    flex: 1 1 calc(50% - 20px);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    &-title {
+      font-size: 1.4rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      font-size: 1rem;
+      color: $light-text-color;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    @include desktop {
+      flex: 1 1 calc(25% - 20px);
+    }
+  }
+
+  &__join-section {
+    background-color: $primary-color;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 10px;
+  }
+
+  &__text1 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    @include desktop {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__contact-info {
+    font-size: 1.2rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    @include desktop {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include tablet {
+    padding: 30px 20px;
+  }
+
+  &__team {
+    margin-top: 60px;
+
+    &-subheading {
+      font-size: 1.5rem;
+      text-align: center;
+      color: $heading-color;
+      font-family: "newsreader";
+      font-weight: bold;
+
+      @include tablet {
+        font-size: 2.5rem;
+      }
+
+      @include desktop {
+        font-size: 3rem;
+      }
+    }
+
+    &-text {
+      font-size: 1.2rem;
+      color: $border-color;
+      text-align: center;
+      margin-bottom: 40px;
+
+      @include tablet {
+        font-size: 1.3rem;
+        margin: 0px auto;
+        width: 70%;
+        margin-bottom: 20px;
+      }
+
+      @include desktop {
+        font-size: 1.4rem;
+      }
+    }
+
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      @include tablet {
+        column-gap: 20px;
+      }
+    }
+
+    &-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      &-image {
+        width: 70%;
+        /* border-radius: 50%; */
+        overflow: hidden;
+        margin-bottom: 20px;
+        flex: 1;
+
+        &-img {
+          width: 100%;
+          height: 100%;
+          object-fit: $background-color;
+          flex: 1;
+        }
+
+        @include tablet {
+          width: 100%;
+        }
+
+        @include desktop {
+          /*  width: 350px; */
+        }
+      }
+
+      &-info {
+        text-align: center;
+        border-top: 10px solid $highlight-color;
+
+        @include tablet {
+          border-left: 10px solid $highlight-color;
+          width: 50%;
+          padding: 10px;
+        }
+      }
+
+      &-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $heading-color;
+
+        @include tablet {
+          font-size: 3rem;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        }
+
+        @include desktop {
+          font-size: 5rem;
+        }
+      }
+
+      &-role {
+        font-size: 1rem;
+        color: $highlight-color;
+        margin-bottom: 10px;
+
+        @include tablet {
+          font-size: 1.5rem;
+        }
+      }
+
+      &-bio {
+        font-size: 0.9rem;
+
+        @include tablet {
+          font-size: 1.8rem;
+          line-height: 1.3;
+        }
+
+        @include desktop {
+          font-size: 2.5rem;
+        }
+      }
+
+      @include tablet {
+        flex-direction: row;
+        flex: 1;
+      }
     }
   }
 }
