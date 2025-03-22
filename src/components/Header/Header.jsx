@@ -28,13 +28,13 @@ function Header() {
               <NavLink to="/" className="header__nav-item" onClick={() => setIsOpen(false)}>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className="header__nav-item" onClick={() => setIsOpen(false)}>Contact</NavLink>
+              <NavLink to="/about" className="header__nav-item" onClick={() => setIsOpen(false)}>About</NavLink>
             </li>
             <li>
               <NavLink to="/Blog" className="header__nav-item" onClick={() => setIsOpen(false)}>Blog</NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="header__nav-item" onClick={() => setIsOpen(false)}>About</NavLink>
+              <NavLink to="/contact" className="header__nav-item" onClick={() => setIsOpen(false)}>Contact</NavLink>
             </li>
           </ul>
         </nav>

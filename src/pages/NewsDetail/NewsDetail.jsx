@@ -78,7 +78,7 @@ function NewsDetail() {
             className="detail-page__logo"
           />
         </Link>
-        <Link to="/" className="detail-page__back-link">
+        <Link to="/blog" className="detail-page__back-link">
           <ArrowLeft className="detail-page__back" />
           <p className="detail-page__back">Home</p>
         </Link>

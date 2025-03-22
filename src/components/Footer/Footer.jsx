@@ -25,23 +25,39 @@ function Footer() {
           <h2 className="footer__nav-title">Menu</h2>
           <ul className="footer__nav-list">
             <li className="footer__nav-item">
-              <Link to="/" className="footer__nav-link">
+              <Link
+                to="/"
+                className="footer__nav-link"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Home
               </Link>
             </li>
             <li className="footer__nav-item">
-              <Link to="/about" className="footer__nav-link">
+              <Link
+                to="/about"
+                className="footer__nav-link"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 About Us
               </Link>
             </li>
             <li className="footer__nav-item">
-              <Link to="/contact" className="footer__nav-link">
-                Contact
+              <Link
+                to="/blog"
+                className="footer__nav-link"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Blog
               </Link>
             </li>
             <li className="footer__nav-item">
-              <Link to="/blog" className="footer__nav-link">
-                Blog
+              <Link
+                to="/contact"
+                className="footer__nav-link"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Contact
               </Link>
             </li>
           </ul>
