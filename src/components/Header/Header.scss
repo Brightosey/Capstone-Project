@@ -26,11 +26,11 @@
     height: auto;
 
     @include tablet {
-      width: 400px;
+      width: 250px;
     }
 
     @include desktop {
-      width: 500px;
+      width: 300px;
     }
   }
 
@@ -71,7 +71,7 @@
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 22%;
+      top: 16%;
       right: 0;
       z-index: 100;
       background: $highlight-color;

@@ -4,6 +4,9 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
+import locationIcon from "../../assets/Icons/location.png";
+import emailIcon from "../../assets/Icons/mail.png";
+import phoneIcon from "../../assets/Icons/phone.png";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -67,8 +70,6 @@ function Contact() {
     }
   };
 
-  
-
   return (
     <>
       <Header />
@@ -76,11 +77,11 @@ function Contact() {
         <article className=" contact__hero-content">
           <h1 className="contact__hero-title">Contact Us</h1>
           <div className="contact__hero-description">
-          <p className=" contact__hero-text">
-            For any product inquiries, assistance, or support.Reach out today,
-            and we’ll provide you with the assitance you need. <br /> Your thoughts and
-            inquiries are important.
-          </p>
+            <p className=" contact__hero-text">
+              For any product inquiries, assistance, or support.Reach out today,
+              and we’ll provide you with the assitance you need. <br /> Your
+              thoughts and inquiries are important.
+            </p>
           </div>
         </article>
 
@@ -98,43 +99,48 @@ function Contact() {
             {/* Location Card */}
             <div className="contact__location">
               <div className="contact__location-container">
-                <img
-                  className="contact__location-icon"
-                  src={null}
-                  alt="Location Icon"
-                />
+              <img src={locationIcon} alt="Location Icon"  className="contact__location-icon" />
               </div>
               <h3 className="contact__location-title">Locations</h3>
               <p className="contact__location-text">
-                Alagomeji Yaba Lagos, Nigeria
+                <a
+                  href="https://www.google.com/maps?q=Alagomeji+Yaba+Lagos+Nigeria"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact__location-link"
+                >
+                  Alagomeji Yaba Lagos, Nigeria
+                </a>
               </p>
             </div>
 
             {/* Email Card */}
             <div className="contact__email">
               <div className="contact__email-container">
-                <img
-                  className="contact__email-icon"
-                  src={null}
-                  alt="Email Icon"
-                />
+              <img src={emailIcon} alt="Email Icon" className="contact__email-icon" />
               </div>
               <h3 className="contact__email-title">Email Address</h3>
-              <p className="contact__email-text">info@relofoods.com</p>
-              <p className="contact__email-text">www.relofoods.com</p>
+              <p className="contact__email-text">
+                <a
+                  href="mailto:brightosey@gmail.com"
+                  className="contact__email-link"
+                >
+                  info@relofoods.com
+                </a>
+              </p>
             </div>
 
             {/* Phone Number Card */}
             <div className="contact__phone">
               <div className="contact__phone-container">
-                <img
-                  className="contact__phone-icon"
-                  src={null}
-                  alt="Phone Icon"
-                />
+              <img src={phoneIcon} alt="Phone Icon" className="contact__phone-icon" />
               </div>
               <h3 className="contact__phone-title">Phone Number</h3>
-              <p className="contact__phone-text">+ (234) 9028545256</p>
+              <p className="contact__phone-text">
+                <a href="tel:+2349028545256" className="contact__phone-link">
+                  Call Us: +2349028545256
+                </a>
+              </p>
             </div>
           </div>
 
@@ -167,9 +173,9 @@ function Contact() {
               required
             ></textarea>
             <div className="contact__btn">
-            <button type="submit" className="contact__button">
-              Send Message
-            </button>
+              <button type="submit" className="contact__button">
+                Send Message
+              </button>
             </div>
           </form>
 
@@ -177,8 +183,8 @@ function Contact() {
           <div className="contact__map">
             <iframe
               title="Administrative Office"
-              src="https://www.google.com/maps?q=6.5244,3.3792&output=embed"
-           /*   src="https://maps.app.goo.gl/pWhRREG6q71ESv1N8" */
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126841.47056696944!2d3.3031369937499935!3d6.502214699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d6f1b184fc5%3A0xc19e3f71f5f1a89b!2sAlagomeji%2C%20Yaba%2C%20Lagos!5e0!3m2!1sen!2sng!4v1710899000000"
+              /*  src="https://www.google.com/maps?q=6.5244,3.3792&output=embed" */
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

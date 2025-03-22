@@ -43,9 +43,9 @@
     &-title {
       font-size: 18px;
       font-family: "newsreader";
-      font-weight:bolder;
+      font-weight: bolder;
 
-      @include tablet{
+      @include tablet {
         font-size: 32px;
       }
 
@@ -58,7 +58,7 @@
       font-size: 14.5px;
       line-height: 1.2;
 
-      @include tablet{
+      @include tablet {
         font-size: 24px;
       }
 
@@ -107,6 +107,7 @@
       line-height: 1.5;
       margin-bottom: 20px;
       text-align: justify;
+      text-decoration: none;
 
       @include tablet {
         font-size: 1.3rem;
@@ -277,6 +278,7 @@
     &-text {
       font-size: 1.1rem;
       margin-bottom: 8px;
+      text-decoration: none;
 
       // Tablet and Desktop Styles
       @include tablet {
@@ -288,6 +290,20 @@
       }
     }
   }
+  &__email,
+  &__phone,
+  &__location {
+    &-link {
+      text-decoration: none;
+      color: $primary-text-color;
+
+      &:hover {
+        color: $active-color;
+        text-shadow: 2px 2px 2px $alternate-text-color;
+      }
+    }
+  }
+
   &__email {
     background: $highlight-color;
   }

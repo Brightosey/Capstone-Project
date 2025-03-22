@@ -49,7 +49,6 @@
     align-items: center;
     color: #fff;
     text-align: center;
-    /* padding: 20px; */
   }
 
   &__hero-title {
@@ -92,26 +91,26 @@
   }
 
   &__hero-button {
-    background-color: #ff9800;
+    background-color: $darker-highlight-color;
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
     font-size: 1rem;
     text-decoration: none;
 
     &:hover {
-      background-color: #e68900;
+      background-color: $highlight-color;
     }
 
     @include tablet {
-        font-size:22px;
+        font-size:26px;
     }
 
     @include desktop {
-        font-size: 26px;
+        font-size: 32px;
     }
   }
 }

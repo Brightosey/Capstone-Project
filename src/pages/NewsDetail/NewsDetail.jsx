@@ -79,14 +79,14 @@ function NewsDetail() {
           />
         </Link>
         <Link to="/" className="detail-page__back-link">
-          <ArrowLeft />
-          Home
+          <ArrowLeft className="detail-page__back" />
+          <p className="detail-page__back">Home</p>
         </Link>
       </article>
 
       <section className="detail-page__content">
         <div className="detail-page__image-container">
-          <img src={post.image_url} alt="image" />
+          <img src={post.image_url} alt="image" className="detail-page__image"/>
         </div>
         <div className="detail-page__detail-container">
           <h1 className="detail-page__title">{post.title}</h1>

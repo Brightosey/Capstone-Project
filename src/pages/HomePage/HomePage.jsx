@@ -13,9 +13,9 @@ import pepperSub from "../../assets/Images/pepper-sub.png";
 import reloFoodsLogo from "../../assets/Logo/ReloFoods2-logo.png";
 import NewsFeed from "../../components/NewsFeed/NewsFeed";
 import agroImage from "../../assets/Images/agro-image.png";
-/* import foodProcessing from "../../assets/Icons/food-processing.png";
+import foodProcessing from "../../assets/Icons/food-processing.png";
 import logistics from "../../assets/Icons/logistics.png";
-import sourcing from "../../assets/Icons/sourcing.png"; */
+import sourcing from "../../assets/Icons/sourcing.png";
 
 
 function HomePage() {
@@ -53,22 +53,20 @@ function HomePage() {
         {/*  Services */}
         <article className="home__services">
           <h2 className="home__services-title">Our Services</h2>
-            <div className="home__services-list">
             <div className="home__services-item">
               <div className="home__services-container">
-                <img className="home__services-image" /* src={foodProcessing} */ alt="foodProcessing" />
+                <img className="home__services-image" src={foodProcessing} alt="foodProcessing" />
                 <p className="home__services-text">Food Processing</p>
               </div>
               <div className="home__services-container">
-                <img className="home__services-image" /* src={sourcing } */ alt="foodProcessing" />
+                <img className="home__services-image" src={sourcing } alt="foodProcessing" />
                 <p className="home__services-text">Direct Product Sourcing</p>
               </div>
               <div className="home__services-container">
-                <img className="home__services-image" /* src={logistics }  */ alt="foodProcessing" />
+                <img className="home__services-image"  src={logistics }   alt="foodProcessing" />
                 <p className="home__services-text">Food Product Logistic</p>
               </div>
             </div>
-          </div>
         </article>
 
         {/* Products */}

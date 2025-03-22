@@ -100,7 +100,7 @@ function NewsFeed({ autoSlide = false }) {
       <h2 className="post__header">Latest News</h2>
       <article className="post__container">
         {autoSlide ? (
-          <Link to={`/post/${posts[currentIndex].id}`} key={posts[currentIndex].id} className="post__home post__home-visible">
+          <Link to={`/post/${posts[currentIndex].id}`} key={posts[currentIndex].id} className="post__home">
             <img
               src={posts[currentIndex].image_url}
               alt={posts[currentIndex].title}
@@ -141,13 +141,13 @@ function NewsFeed({ autoSlide = false }) {
                   {new Date(post.created_at).toLocaleDateString()}
                 </p>
               </div>
-              <div className="post__tag-container">
+             {/*  <div className="post__tag-container">
                 {post.tags.map((tag) => (
                   <p className="post__tags" key={tag}>
                     {tag}
                   </p>
                 ))}
-              </div>
+              </div> */}
               <p className="read-more">Read more →</p>
             </Link>
           ))

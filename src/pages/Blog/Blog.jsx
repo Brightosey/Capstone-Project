@@ -9,7 +9,7 @@ function Blog() {
       <section className="blog">
         <article className=" blog__hero-content">
           <h1 className="blog__hero-title">
-            From Farm to Market: Stories That Matter
+            From Farm to Market: <br /> Stories That Matter
           </h1>
           <div className="blog__hero-description">
           <p className=" blog__hero-text">

@@ -27,10 +27,27 @@ $link-color: #007bff;
   &__logo-link {
     display: flex;
     align-items: center;
+    font-size: 60px;
   }
 
   &__logo {
-    width: 120px;
+    width: 200px;
+
+    @include tablet {
+      width: 250px;
+    }
+
+    @include desktop {
+      width: 300px;
+    }
+  }
+
+  &__back {
+    font-size: 25px;
+
+    @include tablet {
+        font-size: 30px;
+    }
   }
 
   &__back-link {
@@ -71,6 +88,7 @@ $link-color: #007bff;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 10px;
   }
 
   &__image {
