@@ -1,17 +1,16 @@
-import "./hero.scss";
+import "./Hero.scss";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 function Hero() {
-
   const [currentIndex, setcurrentIndex] = useState(0);
   const [slides, setSlides] = useState([]);
 
   useEffect(() => {
-    if(slides.length === 0) return;
+    if (slides.length === 0) return;
 
     const interval = setInterval(() => {
       setcurrentIndex((prev) => (prev + 1) % slides.length);
@@ -32,8 +31,8 @@ function Hero() {
       }
     };
     fetchSlides();
-  }, [])
- console.log(slides[0]?.image);
+  }, []);
+  console.log(slides[0]?.image);
   return (
     <section className="hero">
       <article className="hero__container">
