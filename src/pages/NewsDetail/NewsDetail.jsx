@@ -84,7 +84,11 @@ function NewsDetail() {
 
       <section className="detail-page__content">
         <div className="detail-page__image-container">
-          <img src={post.image_url} alt="image" className="detail-page__image"/>
+          <img
+            src={backendUrl+post.image_url}
+            alt="image"
+            className="detail-page__image"
+          />
         </div>
         <div className="detail-page__detail-container">
           <h1 className="detail-page__title">{post.title}</h1>

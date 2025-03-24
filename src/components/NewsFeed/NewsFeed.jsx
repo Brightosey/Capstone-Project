@@ -70,7 +70,7 @@ function NewsFeed({ autoSlide = false }) {
           posts?.map((post) => (
             <Link to={`/post/${post.id}`} key={post.id} className="post__body">
               <img
-                src={post.image_url}
+                src={backendUrl+post.image_url}
                 alt={post.title}
                 className="post__image"
               />
