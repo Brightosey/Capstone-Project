@@ -45,7 +45,7 @@ function NewsFeed({ autoSlide = false }) {
         {autoSlide ? (
           <Link to={`/post/${posts[currentIndex].id}`} key={posts[currentIndex].id} className="post__home">
             <img
-              src={posts[currentIndex].image_url}
+              src={backendUrl+posts[currentIndex].image_url}
               alt={posts[currentIndex].title}
               className="post__home-image"
             />
