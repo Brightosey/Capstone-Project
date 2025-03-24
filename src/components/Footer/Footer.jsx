@@ -1,6 +1,6 @@
 import "./Footer.scss";
 import { Link } from "react-router-dom";
-import LinkedInIcon from "../../assets/Icons/X_twitter.svg";
+import LinkedInIcon from "../../assets/Icons/linkedin.png";
 import InstagramIcon from "../../assets/Icons/Instagram.svg";
 import FacebookIcon from "../../assets/Icons/Facebook.svg";
 import reloFoodsLogo from "../../assets/Logo/ReloFoods-logo.svg";
@@ -68,7 +68,7 @@ function Footer() {
           <h2 className="footer__social-title">Follow Us</h2>
           <div className="footer__social-icon">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61573123475556&mibextid=wwXIfr&mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__social-link"
@@ -76,7 +76,7 @@ function Footer() {
               <img src={FacebookIcon} alt="Facebook" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/relofoods?igsh=MXN0Y3ptM2h6MmoxOA=="
               target="_blank"
               rel="noopener noreferrer"
               className="footer__social-link"
@@ -84,7 +84,7 @@ function Footer() {
               <img src={InstagramIcon} alt="Instagram" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/relofoods/"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__social-link"

@@ -80,7 +80,7 @@ function NewsDetail() {
         </Link>
         <Link to="/blog" className="detail-page__back-link">
           <ArrowLeft className="detail-page__back" />
-          <p className="detail-page__back">Home</p>
+          <p className="detail-page__back">Back</p>
         </Link>
       </article>
 
