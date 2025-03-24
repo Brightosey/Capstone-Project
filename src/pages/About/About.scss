@@ -3,12 +3,6 @@
 @use "../../style/partials/variables" as *;
 @use "../../style/partials/font" as *;
 
-$primary-color: #4caf50;
-$secondary-color: #ff7043;
-$background-color: #f7f7f7;
-
-
-
 
 .about {
   &__hero {
@@ -253,7 +247,7 @@ $background-color: #f7f7f7;
 
     &-title {
       font-size: 1.4rem;
-      color: $primary-color;
+      color: $header-color;
     }
 
     &-text {
@@ -287,7 +281,7 @@ $background-color: #f7f7f7;
 
     &-title {
       font-size: 1.4rem;
-      color: $primary-color;
+      color: $header-color;
       margin-bottom: .625rem;
     }
 
@@ -306,7 +300,7 @@ $background-color: #f7f7f7;
   }
 
   &__join-section {
-    background-color: $primary-color;
+    background-color: $header-color;
     color: white;
     padding: 3.125rem 1.25rem;
     text-align: center;
