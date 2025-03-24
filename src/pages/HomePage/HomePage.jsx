@@ -1,5 +1,4 @@
 import "./HomePage.scss";
-import { useState, useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
 import Header from "../../components/Header/Header";
 import coffeeBeansMain from "../../assets/Images/Coffee-beans-main.png";

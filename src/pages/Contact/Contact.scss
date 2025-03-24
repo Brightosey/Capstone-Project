@@ -14,15 +14,14 @@
       background-image: url("../../assets/Images/hero-contact.png");
       background-size: cover;
       width: 95%;
-      height: 400px;
-      margin: 0px auto;
-      margin-top: -40px;
-      border: 2px solid $border-color;
-      border-radius: 20px;
-      backdrop-filter: blur(160px);
-      animation: backgroundMovement 10s infinite alternate; // Animation added here
+      height: 25rem;
+      margin: 0rem auto;
+      margin-top: -2.5rem;
+      border: 0.125rem solid $border-color;
+      border-radius: 1.25rem;
+      backdrop-filter: blur(10rem);
+      animation: backgroundMovement 10s infinite alternate;
 
-      // Background movement animation
       @keyframes backgroundMovement {
         0% {
           background-position: 0% 0%;
@@ -35,60 +34,60 @@
         }
 
         @include desktop {
-          height: 400px;
+          height: 25rem;
         }
       }
     }
 
     &-title {
-      font-size: 18px;
+      font-size: 1.125rem;
       font-family: "newsreader";
       font-weight: bolder;
 
       @include tablet {
-        font-size: 32px;
+        font-size: 2rem;
       }
 
       @include desktop {
-        font-size: 40px;
+        font-size: 2.5rem;
       }
     }
 
     &-text {
-      font-size: 14.5px;
+      font-size: 0.9063rem;
       line-height: 1.2;
 
       @include tablet {
-        font-size: 24px;
+        font-size: 1.5rem;
       }
 
       @include desktop {
-        font-size: 32px;
+        font-size: 2rem;
       }
     }
 
     &-title,
     &-text {
-      color: $primary-text-color;
-      text-shadow: 2px 2px 2px $highlight-color;
+      color: $highlight-color;
+      text-shadow: 0.125rem 0.125rem 0.125rem $primary-text-color;
     }
 
     &-description {
       width: 70%;
       text-align: justify;
-      padding: 10px;
+      padding: 0.625rem;
     }
   }
 
   &__body-section {
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
 
     // Title styling
     &-title {
       font-size: 1.3rem;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
       font-family: "newsreader";
       text-align: center;
 
@@ -105,7 +104,7 @@
     &-text {
       font-size: 1rem;
       line-height: 1.5;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
       text-align: justify;
       text-decoration: none;
 
@@ -121,21 +120,21 @@
 
   &__form {
     width: 100%;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 2.5rem auto;
+    padding: 1.25rem;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
   }
 
   &__input,
   &__textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 2px solid $border-color;
-    border-radius: 10px;
-    font-size: 16px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 0.125rem solid $border-color;
+    border-radius: 0.625rem;
+    font-size: 1rem;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
 
@@ -152,7 +151,7 @@
 
   &__textarea {
     resize: vertical;
-    min-height: 150px;
+    min-height: 9.375rem;
   }
 
   &__btn {
@@ -161,12 +160,12 @@
   }
 
   &__button {
-    padding: 12px;
-    font-size: 16px;
+    padding: 0.75rem;
+    font-size: 1rem;
     background-color: $darker-highlight-color;
     color: $alternate-text-color;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
@@ -186,7 +185,7 @@
 
     & iframe {
       width: 100%;
-      height: 500px; /* You can adjust the height as per your design needs */
+      height: 31.25rem;
       border: none;
       display: block;
     }
@@ -196,18 +195,18 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    gap: 1.25rem;
+    padding: 1.25rem;
 
     // Tablet and Desktop Styles
     @include tablet {
-      gap: 25px;
-      padding: 30px;
+      gap: 1.5625rem;
+      padding: 1.875rem;
     }
 
     @include desktop {
-      gap: 30px;
-      padding: 40px;
+      gap: 1.875rem;
+      padding: 2.5rem;
     }
   }
 
@@ -216,56 +215,53 @@
   &__phone {
     flex: 1;
     background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
     &:hover {
-      transform: scale(1.1); // Increases size by 10%
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); // Adds depth
-    }
+      transform: scale(1.1);
+      box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.5);
 
-    // Tablet and Desktop Styles
-    @include tablet {
-      flex: 0 1 calc(33% - 20px);
-      padding: 25px;
-    }
-
-    @include desktop {
-      flex: 0 1 calc(30% - 20px);
-      padding: 30px;
-    }
-
-    &-container {
-      margin-bottom: 15px;
-    }
-
-    &-icon {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-      margin-bottom: 10px;
-
-      // Tablet and Desktop Styles
       @include tablet {
-        width: 60px;
-        height: 60px;
+        flex: 0 1 calc(33% - 1.25rem);
+        padding: 1.5625rem;
       }
 
       @include desktop {
-        width: 70px;
-        height: 70px;
+        flex: 0 1 calc(30% - 1.25rem);
+        padding: 1.875rem;
+      }
+
+      &-container {
+        margin-bottom: 0.9375rem;
+      }
+    }
+
+    &-icon {
+      width: 3.125rem;
+      height: 3.125rem;
+      object-fit: contain;
+      margin-bottom: 0.625rem;
+
+      @include tablet {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+
+      @include desktop {
+        width: 4.375rem;
+        height: 4.375rem;
       }
     }
 
     &-title {
       font-size: 1.5rem;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
 
-      // Tablet and Desktop Styles
       @include tablet {
         font-size: 1.8rem;
       }
@@ -277,10 +273,9 @@
 
     &-text {
       font-size: 1.1rem;
-      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
       text-decoration: none;
 
-      // Tablet and Desktop Styles
       @include tablet {
         font-size: 1.2rem;
       }
@@ -299,7 +294,7 @@
 
       &:hover {
         color: $active-color;
-        text-shadow: 2px 2px 2px $alternate-text-color;
+        text-shadow: 0.125rem 0.125rem 0.125rem $alternate-text-color;
       }
     }
   }

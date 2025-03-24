@@ -36,9 +36,7 @@ function NewsDetail() {
   }
 
   function formatDetailText(text) {
-    // Split the text into sections based on double new lines for paragraphs
     const sections = text.split(/\n\n+/).map((section, index) => {
-      // Handle bullet points (- item) and numbered lists (1. item)
       if (/^(\d+\.\s|\-\s)/m.test(section)) {
         const lines = section.split("\n");
         const isOrdered = /^\d+\.\s/.test(lines[0]);

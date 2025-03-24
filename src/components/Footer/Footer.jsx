@@ -20,7 +20,7 @@ function Footer() {
           </Link>
         </div>
 
-        {/* Navigation Links */}
+     
         <nav className="footer__nav">
           <h2 className="footer__nav-title">Menu</h2>
           <ul className="footer__nav-list">
@@ -63,7 +63,7 @@ function Footer() {
           </ul>
         </nav>
 
-        {/* Social Media Links */}
+        
         <div className="footer__social">
           <h2 className="footer__social-title">Follow Us</h2>
           <div className="footer__social-icon">
@@ -95,7 +95,6 @@ function Footer() {
         </div>
       </div>
 
-      {/* Copyright Section */}
       <div className="footer__bottom">
         <p className="footer__copyright">
           &copy; {new Date().getFullYear()} ReloFoods. All rights reserved.

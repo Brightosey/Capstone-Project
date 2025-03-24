@@ -4,7 +4,7 @@
 @use "../../style/partials/font" as *;
 
 .footer {
-  background-color: $alternate-text-color; // Use your defined footer background color
+  background-color: $alternate-text-color; 
   padding: 2rem 1rem;
   text-align: center;
 
@@ -29,7 +29,7 @@
   &__logo {
 
     &-image {
-      width: 240px; // Adjust as needed
+      width: 15rem; 
       transition: transform 0.3s ease-in-out;
 
       &:hover {
@@ -53,12 +53,12 @@
     }
 
     &-title {
-        font-size: 28px;
+        font-size: 1.75rem;
         font-weight: bold;
         font-family: "newsreader";
 
         @include tablet {
-            font-size: 32px;
+            font-size: 2rem;
         }
     }
 
@@ -85,12 +85,12 @@
       }
 
     &-title {
-        font-size: 28px;
+        font-size: 1.75rem;
         font-weight: bold;
         font-family: "newsreader";
 
         @include tablet {
-            font-size: 32px;
+            font-size: 2rem;
         }
     }
 
@@ -104,8 +104,8 @@
       transition: transform 0.3s ease-in-out;
 
       img {
-        width: 30px;
-        height: 30px;
+        width: 1.875rem;
+        height: 1.875rem;
       }
 
       &:hover {

@@ -1,7 +1,6 @@
 import "./Contact.scss";
 import Header from "../../components/Header/Header";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import locationIcon from "../../assets/Icons/location.png";
@@ -184,7 +183,6 @@ function Contact() {
             <iframe
               title="Administrative Office"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126841.47056696944!2d3.3031369937499935!3d6.502214699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d6f1b184fc5%3A0xc19e3f71f5f1a89b!2sAlagomeji%2C%20Yaba%2C%20Lagos!5e0!3m2!1sen!2sng!4v1710899000000"
-              /*  src="https://www.google.com/maps?q=6.5244,3.3792&output=embed" */
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -14,15 +14,14 @@
       background-image: url("../../assets/Images/hero-blog.png");
       background-size: cover;
       width: 95%;
-      height: 400px;
-      margin: 0px auto;
-      margin-top: -40px;
-      border: 2px solid $border-color;
-      border-radius: 20px;
-      backdrop-filter: blur(160px);
+      height: 25rem;
+      margin: 0rem auto;
+      margin-top: -2.5rem;
+      border: .125rem solid $border-color;
+      border-radius: 1.25rem;
+      backdrop-filter: blur(10rem);
       animation: backgroundMovement 10s infinite alternate; // Animation added here
 
-      // Background movement animation
       @keyframes backgroundMovement {
         0% {
           background-position: 0% 0%;
@@ -35,7 +34,7 @@
         }
 
         @include desktop {
-          height: 600px;
+          height: 37.5rem;
         }
       }
     }
@@ -45,43 +44,43 @@
     }
 
     &-title {
-      font-size: 18px;
+      font-size: 1.125rem;
       line-height: 1.2;
       font-family: "newsreader";
       font-weight: bolder;
 
       @include tablet {
-        font-size: 32px;
+        font-size: 2rem;
       }
 
       @include desktop {
-        font-size: 40px;
+        font-size: 2.5rem;
       }
     }
 
     &-text {
-      font-size: 14.5px;
+      font-size: .9063rem;
       line-height: 1.2;
 
       @include tablet {
-        font-size: 24px;
+        font-size: 1.5rem;
       }
 
       @include desktop {
-        font-size: 32px;
+        font-size: 2rem;
       }
     }
 
     &-title,
     &-text {
       color: $primary-text-color;
-      text-shadow: 2px 2px 2px $highlight-color;
+      text-shadow: .125rem .125rem .125rem $highlight-color;
     }
 
     &-description {
       width: 70%;
       text-align: justify;
-      padding: 10px;
+      padding: .625rem;
     }
   }
 
@@ -106,8 +105,8 @@
   &__post {
     flex: 1;
     padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: .75rem;
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
     gap: 1.25rem;
 
     @include tablet {
@@ -123,8 +122,8 @@
   &__sidebar {
     background: white;
     padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: .75rem;
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
 
     @include tablet {
       flex: 0.5; // Takes up less space on tablet
@@ -161,14 +160,14 @@
 
       li {
         padding: 0.75rem;
-        border-radius: 8px;
+        border-radius: .5rem;
         margin-bottom: 0.5rem;
         transition: background 0.3s, transform 0.2s;
         cursor: pointer;
 
         &:hover {
           background: $highlight-color;
-          transform: translateY(-3px);
+          transform: translateY(-0.1875rem);
         }
 
         @include tablet {

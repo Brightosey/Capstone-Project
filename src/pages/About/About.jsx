@@ -173,7 +173,7 @@ function About() {
                 />
               </div>
               <div className="about__team-member-info">
-                <h3 className="about__team-member-name">Lukeman Olaniyan</h3>
+                <h3 className="about__team-member-name">Lukman Olaniyan</h3>
                 <p className="about__team-member-role">CEO & Founder</p>
                 <p className="about__team-member-bio">
                   Lukeman is a visionary in sustainable agriculture and leads our

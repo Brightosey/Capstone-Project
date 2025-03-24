@@ -5,8 +5,8 @@
 
 .home {
   color: #333;
-  padding: 16px;
-  margin: 0px auto;
+  padding: 1rem;
+  margin: 0rem auto;
 
   &__about {
     display: flex;
@@ -16,7 +16,7 @@
     background-color: $background-color;
     padding: 3rem 1rem;
     gap: 2.5rem;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
     flex: 1;
 
@@ -29,14 +29,14 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      gap: 10px;
+      gap: .625rem;
       flex: 1;
 
       .home__about-icon {
-        width: 70px;
+        width: 4.375rem;
 
         @include tablet {
-          width: 32px;
+          width: 2rem;
         }
       }
 
@@ -46,7 +46,7 @@
         flex: 1;
 
         @include tablet {
-          font-size: 24px;
+          font-size: 1.5rem;
         }
       }
     }
@@ -62,14 +62,14 @@
     &-text {
       font-size: 1rem;
       line-height: 1.6;
-      max-width: 600px;
-      border-left: 4px solid $highlight-color;
+      max-width: 37.5rem;
+      border-left: .25rem solid $highlight-color;
       padding-left: 1rem;
       flex: 3;
       text-align: justify;
 
       @include tablet {
-        font-size: 22px;
+        font-size: 1.375rem;
       }
     }
 
@@ -82,10 +82,10 @@
 
       .home__about-img {
         width: 100%;
-        max-width: 450px;
-        border-radius: 8px;
+        max-width: 28.125rem;
+        border-radius: .5rem;
         object-fit: cover;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0rem .25rem .625rem rgba(0, 0, 0, 0.1);
       }
     }
   }
@@ -94,21 +94,21 @@
     display: flex;
     flex-direction: column;
     background: #f5f5f5;
-    height: 300px;
-    margin: 0px auto;
-    margin-bottom: 20px;
-    border: 2px solid $border-color;
-    border-radius: 20px;
+    height: 18.75rem;
+    margin: 0rem auto;
+    margin-bottom: 1.25rem;
+    border: .125rem solid $border-color;
+    border-radius: 1.25rem;
 
     &-image {
-      width: 30px;
+      width: 1.875rem;
 
       @include tablet {
-        width: 40px;
+        width: 2.5rem;
       }
 
       @include desktop {
-        width: 50px;
+        width: 3.125rem;
       }
     }
 
@@ -117,8 +117,8 @@
       font-family: "newsreader";
       font-size: 2rem;
       font-weight: bold;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem;
 
       @include tablet {
         font-size: 2.4rem;
@@ -130,16 +130,16 @@
     }
 
     &-text {
-      font-size: 17px;
+      font-size: 1.0625rem;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: .625rem;
 
       @include tablet {
-        font-size: 22px;
+        font-size: 1.375rem;
       }
 
       @include desktop {
-        font-size: 28px;
+        font-size: 1.75rem;
       }
     }
 
@@ -147,7 +147,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      padding: 0px 20px;
+      padding: 0rem 1.25rem;
 
       @include tablet {
         flex-direction: row;
@@ -195,14 +195,14 @@
     }
 
     &-item {
-      width: 250px;
+      width: 15.625rem;
       text-align: center;
     }
 
     &-image-box {
       position: relative;
       width: 100%;
-      height: 250px;
+      height: 15.625rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -212,7 +212,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: .625rem;
     }
 
     &-image-overlay {
@@ -228,8 +228,8 @@
       position: absolute;
       bottom: 5%;
       right: 5%;
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
     &-name {
@@ -240,16 +240,16 @@
   }
 
   &__contact {
-    padding: 20px;
+    padding: 1.25rem;
     background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    border-radius: .5rem;
+    box-shadow: 0 .125rem .5rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
 
     &-title {
       font-size: 2rem;
       color: #333;
-      margin-bottom: 10px;
+      margin-bottom: .625rem;
       font-weight: bold;
       text-align: center;
       font-family: "newsreader";
@@ -266,7 +266,7 @@
     &-text {
       font-size: 1.1rem;
       line-height: 1.6;
-      margin-bottom: 15px;
+      margin-bottom: .9375rem;
       text-align: justify;
 
       @include tablet {
@@ -279,11 +279,11 @@
     }
 
     @include tablet {
-      padding: 25px;
+      padding: 1.5625rem;
     }
 
     @include desktop {
-      padding: 30px;
+      padding: 1.875rem;
     }
   }
 }
