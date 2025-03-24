@@ -39,7 +39,7 @@ function Hero() {
         {slides.length > 0 && (
           <>
             <img
-              src={backendUrl+slides[currentIndex].image}
+              src={backendUrl + slides[currentIndex].image}
               alt="agriculture"
               className="hero__hero-image"
             />
