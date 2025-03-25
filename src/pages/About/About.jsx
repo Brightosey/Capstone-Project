@@ -1,6 +1,6 @@
 import "./About.scss";
 import Header from "../../components/Header/Header";
-import ceoImage from "../../assets/Images/CEO-image.png";
+import ceoImage from "../../assets/Images/CEO-image.jpg";
 
 function About() {
   return (
@@ -34,7 +34,7 @@ function About() {
                 efficiency, and forward-thinking solutions.
               </p>
               <figure className="about__section-figure">
-                {/* <img src={ceoImage} alt="image" /> */}
+
               </figure>
             </div>
 
@@ -176,7 +176,7 @@ function About() {
                 <h3 className="about__team-member-name">Lukman Olaniyan</h3>
                 <p className="about__team-member-role">CEO & Founder</p>
                 <p className="about__team-member-bio">
-                  Lukeman is a visionary in sustainable agriculture and leads our
+                  Lukman is a visionary in sustainable agriculture and leads our
                   team with a passion for driving innovation and efficiency
                   across the sector.
                 </p>

@@ -30,7 +30,7 @@ function HomePage() {
                 alt="Agri-Icon"
                 className="home__about-icon"
               />
-              <h3 className="home__about-subtitle">Welcome to</h3>
+              <h3 className="home__about-subtitle">Introducing</h3>
             </div>
             <h1 className="home__about-title">Relo Foods Limited</h1>
             <p className="home__about-text">
@@ -49,7 +49,7 @@ function HomePage() {
           </div>
         </article>
 
-        {/*  Services */}
+    
         <article className="home__services">
           <h2 className="home__services-title">Our Services</h2>
             <div className="home__services-item">
@@ -68,7 +68,7 @@ function HomePage() {
             </div>
         </article>
 
-        {/* Products */}
+        
         <article className="home__products">
           <h2 className="home__products-title">Featured Products</h2>
           <div className="home__products-list">
@@ -94,7 +94,7 @@ function HomePage() {
               <p className="home__products-name">Maize</p>
             </div>
 
-            {/* Soybeans */}
+          
             <div className="home__products-item">
               <div className="home__products-image-box">
                 <img
@@ -116,7 +116,7 @@ function HomePage() {
               <p className="home__products-name">Soybeans</p>
             </div>
 
-            {/* Coffee Beans */}
+            
             <div className="home__products-item">
               <div className="home__products-image-box">
                 <img
