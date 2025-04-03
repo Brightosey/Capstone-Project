@@ -69,14 +69,14 @@
 
     &--open {
       display: flex;
-      flex-direction: column;
       position: absolute;
-      top: 16%;
-      right: 0;
-      z-index: 100;
-      background: $highlight-color;
-      width: 12.5rem;
-      box-shadow: 0 .25rem .375rem rgba(0, 0, 0, 0.1);
+      top: 150px;
+      left: 0;
+      width: 100%;
+      background: $header-color;
+      padding: 1rem;
+      z-index: 1;
+      box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease-in-out;
     }
   }
@@ -115,8 +115,8 @@
       color: $alternate-text-color;
       text-decoration: underline;
       background: $highlight-color;
-      border: .125rem solid $border-color;
-      border-radius: .9375rem;
+      border: 0.125rem solid $border-color;
+      border-radius: 0.9375rem;
     }
 
     @include tablet {
