@@ -2,7 +2,6 @@ import "./Contact.scss";
 import Header from "../../components/Header/Header";
 import { useState } from "react";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
 import locationIcon from "../../assets/Icons/location.png";
 import emailIcon from "../../assets/Icons/mail.png";
 import phoneIcon from "../../assets/Icons/phone.png";
