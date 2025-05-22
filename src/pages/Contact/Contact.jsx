@@ -14,7 +14,7 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(flase);
 
-  function handleName(event) {
+ /*  function handleName(event) {
     setName(event.target.value);
   }
 
@@ -24,7 +24,7 @@ function Contact() {
 
   function handleMessage(event) {
     setMessage(event.target.value);
-  }
+  } */
 
   function isEmailValid(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -179,16 +179,16 @@ function Contact() {
               type="text"
               name="name"
               value={name}
-              onChange={handleName}
+              onChange={(e) => setName(e.target.value)}
               placeholder="Your Name"
               className="contact__input"
               required
             />
             <input
               type="email"
-              name="name"
+              name="email"
               value={email}
-              onChange={handleEmail}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
               className="contact__input"
               required
@@ -197,7 +197,7 @@ function Contact() {
               placeholder="Your Message"
               name="message"
               value={message}
-              onChange={handleMessage}
+              onChange={(e) => setMessage(e.target.value)}
               className="contact__textarea"
               required
             ></textarea>
