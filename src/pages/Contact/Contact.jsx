@@ -12,9 +12,9 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(flase);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
- /*  function handleName(event) {
+  /*  function handleName(event) {
     setName(event.target.value);
   }
 
@@ -72,7 +72,7 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY      
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -128,7 +128,11 @@ function Contact() {
             {/* Location Card */}
             <div className="contact__location">
               <div className="contact__location-container">
-              <img src={locationIcon} alt="Location Icon"  className="contact__location-icon" />
+                <img
+                  src={locationIcon}
+                  alt="Location Icon"
+                  className="contact__location-icon"
+                />
               </div>
               <h3 className="contact__location-title">Locations</h3>
               <p className="contact__location-text">
@@ -146,7 +150,11 @@ function Contact() {
             {/* Email Card */}
             <div className="contact__email">
               <div className="contact__email-container">
-              <img src={emailIcon} alt="Email Icon" className="contact__email-icon" />
+                <img
+                  src={emailIcon}
+                  alt="Email Icon"
+                  className="contact__email-icon"
+                />
               </div>
               <h3 className="contact__email-title">Email Address</h3>
               <p className="contact__email-text">
@@ -162,7 +170,11 @@ function Contact() {
             {/* Phone Number Card */}
             <div className="contact__phone">
               <div className="contact__phone-container">
-              <img src={phoneIcon} alt="Phone Icon" className="contact__phone-icon" />
+                <img
+                  src={phoneIcon}
+                  alt="Phone Icon"
+                  className="contact__phone-icon"
+                />
               </div>
               <h3 className="contact__phone-title">Phone Number</h3>
               <p className="contact__phone-text">
