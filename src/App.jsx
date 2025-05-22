@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import NewsDetail from "./pages/NewsDetail/NewsDetail";
+import ScrollTopButton from "./Hook/ScrollTopButton/ScrollTopButton";
 import Blog from "./pages/Blog/Blog";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
       </Routes>
       <Footer />
+      <ScrollTopButton />
     </BrowserRouter>
   );
 }

@@ -12,6 +12,7 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(flase);
 
   function handleName(event) {
     setName(event.target.value);
@@ -57,6 +58,36 @@ function Contact() {
     setName("");
     setEmail("");
     setMessage("");
+
+    // Prepare template params
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY      
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSubmitted(true); // Show the thank you message on successful submission
+
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.error("Error sending message:", error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      );
   }
 
   const postMessage = async (newMessage) => {
